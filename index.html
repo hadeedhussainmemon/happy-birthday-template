@@ -188,31 +188,6 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
 .share-url-box.show{display:block}
 .share-url-box .url-text{color:#e9d5ff;user-select:all}
 
-.domain-toggle{
-  margin-top:14px;text-align:center;
-}
-.domain-toggle button{
-  background:none;border:none;color:rgba(255,255,255,.7);
-  font-size:.85rem;cursor:pointer;text-decoration:underline;
-  font-family:'Inter',sans-serif;transition:color .3s;
-}
-.domain-toggle button:hover{color:#fff}
-.domain-row{
-  margin-top:10px;display:none;
-}
-.domain-row.show{display:block}
-.domain-row label{
-  display:block;font-size:.68rem;font-weight:600;
-  color:rgba(255,255,255,.8);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;
-}
-.domain-row input{
-  width:100%;padding:10px 14px;border-radius:10px;
-  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
-  color:#e9d5ff;font-family:monospace;font-size:.82rem;outline:none;transition:all .3s;
-}
-.domain-row input:focus{border-color:rgba(168,85,247,.4);background:rgba(255,255,255,.12)}
-.domain-row .hint{font-size:.75rem;color:rgba(255,255,255,.7);margin-top:4px}
-
 /* ====== BUTTONS ====== */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:8px;
@@ -505,14 +480,6 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
         <span style="color:rgba(255,255,255,.9)">Share this link ↓</span><br>
         <span class="url-text" id="shareUrlText"></span>
       </div>
-      <div class="domain-toggle">
-        <button onclick="toggleDomain()">⚙️ Set custom domain</button>
-      </div>
-      <div class="domain-row" id="domainRow">
-        <label>Vercel / Custom Domain</label>
-        <input type="text" id="iDomain" placeholder="my-bday.vercel.app">
-        <p class="hint">Leave empty — auto-detected when deployed</p>
-      </div>
     </div>
   </div>
 </div>
@@ -694,18 +661,10 @@ function applyConfig(){
 function launch(){readForm();applyConfig();go('s-home')}
 
 /* ===== SHARE ===== */
-function toggleDomain(){
-  document.getElementById('domainRow').classList.toggle('show');
-}
 function buildShareURL(){
   readForm();
-  let domain=document.getElementById('iDomain').value.trim();
-  if(location.protocol!=='file:'&&!domain)domain=location.origin;
-  if(domain){
-    if(!domain.startsWith('http'))domain='https://'+domain;
-    domain=domain.replace(/\/+$/,'');
-  }else{domain='https://your-app.vercel.app'}
-  return domain+'/?'+new URLSearchParams({name:C.name,relation:C.rel,from:C.from}).toString();
+  const domain = 'https://hadeedhussainmemon.github.io/happy-birthday-template';
+  return domain + '/?' + new URLSearchParams({name:C.name,relation:C.rel,from:C.from}).toString();
 }
 function copyShareLink(){
   const url=buildShareURL();
