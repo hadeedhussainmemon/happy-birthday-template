@@ -110,8 +110,8 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
   font-weight:300;font-size:clamp(1.1rem,3.5vw,1.4rem);
   line-height:1.6;color:rgba(255,255,255,.85);
 }
-.body{font-size:clamp(.92rem,2.8vw,1.1rem);color:rgba(255,255,255,.6);font-weight:300}
-.body-bright{font-size:clamp(.95rem,3vw,1.15rem);color:rgba(255,255,255,.8);font-weight:400}
+.body{font-size:clamp(.92rem,2.8vw,1.1rem);color:rgba(255,255,255,.85);font-weight:300}
+.body-bright{font-size:clamp(.95rem,3vw,1.15rem);color:#fff;font-weight:500}
 .rose{color:#f0abfc}
 .emoji-lg{font-size:clamp(2rem,6vw,3.5rem);line-height:1}
 
@@ -141,11 +141,11 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
   background:linear-gradient(135deg,#fff,#e9b4ff);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-.setup-card .sub{color:rgba(255,255,255,.45);font-size:.85rem;margin-bottom:24px;font-weight:300}
+.setup-card .sub{color:rgba(255,255,255,.8);font-size:.85rem;margin-bottom:24px;font-weight:400}
 .fld{margin-bottom:16px;text-align:left}
 .fld label{
   display:block;font-size:.7rem;font-weight:600;
-  color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;
+  color:rgba(255,255,255,.9);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;
 }
 .fld input,.fld select{
   width:100%;padding:13px 16px;border-radius:12px;
@@ -181,37 +181,37 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
 .btn-share.copied{background:rgba(34,197,94,.15)!important;border-color:rgba(34,197,94,.4)!important;color:#4ade80!important}
 
 .share-url-box{
-  margin-top:12px;background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08);
+  margin-top:12px;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);
   border-radius:10px;padding:10px 14px;display:none;word-break:break-all;
-  font-size:.78rem;color:rgba(255,255,255,.5);font-family:monospace;text-align:left;line-height:1.5;
+  font-size:.78rem;color:rgba(255,255,255,.9);font-family:monospace;text-align:left;line-height:1.5;
 }
 .share-url-box.show{display:block}
-.share-url-box .url-text{color:#a78bfa;user-select:all}
+.share-url-box .url-text{color:#e9d5ff;user-select:all}
 
 .domain-toggle{
   margin-top:14px;text-align:center;
 }
 .domain-toggle button{
-  background:none;border:none;color:rgba(255,255,255,.35);
-  font-size:.78rem;cursor:pointer;text-decoration:underline;
+  background:none;border:none;color:rgba(255,255,255,.7);
+  font-size:.85rem;cursor:pointer;text-decoration:underline;
   font-family:'Inter',sans-serif;transition:color .3s;
 }
-.domain-toggle button:hover{color:rgba(255,255,255,.6)}
+.domain-toggle button:hover{color:#fff}
 .domain-row{
   margin-top:10px;display:none;
 }
 .domain-row.show{display:block}
 .domain-row label{
   display:block;font-size:.68rem;font-weight:600;
-  color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;
+  color:rgba(255,255,255,.8);letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;
 }
 .domain-row input{
   width:100%;padding:10px 14px;border-radius:10px;
-  border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);
-  color:#a78bfa;font-family:monospace;font-size:.82rem;outline:none;transition:all .3s;
+  border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);
+  color:#e9d5ff;font-family:monospace;font-size:.82rem;outline:none;transition:all .3s;
 }
-.domain-row input:focus{border-color:rgba(168,85,247,.4);background:rgba(255,255,255,.06)}
-.domain-row .hint{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:4px}
+.domain-row input:focus{border-color:rgba(168,85,247,.4);background:rgba(255,255,255,.12)}
+.domain-row .hint{font-size:.75rem;color:rgba(255,255,255,.7);margin-top:4px}
 
 /* ====== BUTTONS ====== */
 .btn{
@@ -532,7 +532,7 @@ canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
 <!-- ===== READY ===== -->
 <div class="s" id="s-ready">
   <div class="inner">
-    <p class="body-lg a" style="color:rgba(255,255,255,.55)">Before I show you your surprise… 😏</p>
+    <p class="body-lg a" style="color:rgba(255,255,255,.9)">Before I show you your surprise… 😏</p>
     <div class="gap-xs"></div>
     <h1 class="display a d1">Are you ready,<br><span class="rose dn">Zara</span>?</h1>
     <div class="gap-lg"></div>
